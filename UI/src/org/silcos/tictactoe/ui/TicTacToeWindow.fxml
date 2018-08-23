@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.silcos.tictactoe.ui.board.BoardButton?>
+<?import org.silcos.tictactoe.ui.board.BoardButtonFactory?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1">
+	<top>
+		<MenuBar>
+			<Menu text="Game">
+				<MenuItem text="New" />
+				<MenuItem text="Save" />
+				<MenuItem text="Save As"/>
+				<SeparatorMenuItem />
+			</Menu>
+			<Menu text="Level">
+				<MenuItem text="Human" />
+				<MenuItem text="Computer (default)" />
+				<SeparatorMenuItem />
+				<MenuItem text="Easy" />
+				<MenuItem text="Medium" />
+				<MenuItem text="Hard" />
+				<MenuItem text="Full Logic" />
+			</Menu>
+			<Menu text="Grid">
+				<MenuItem text="3x3 | Amateur" onAction="#handleSizeChangerAction" />
+				<MenuItem text="5x5 | Medium" onAction="#handleSizeChangerAction" />
+				<MenuItem text="7x7 | Expert" onAction="#handleSizeChangerAction" />
+				<MenuItem text="9x9 | Grandmaster" onAction="#handleSizeChangerAction" />
+			</Menu>
+			<Menu text="Help">
+				<MenuItem text="Manual" />
+				<MenuItem text="About" />
+				<SeparatorMenuItem />
+				<MenuItem text="Copyright (C) 2018 - Shukant Pal" />
+			</Menu>
+		</MenuBar>
+	</top>
+	<left>
+		<VBox>
+		</VBox>
+	</left>
+	<center>
+		<GridPane fx:id="boardGrid">
+			<columnConstraints>
+				<ColumnConstraints percentWidth="100" />
+				<ColumnConstraints percentWidth="100" />
+				<ColumnConstraints percentWidth="100" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints percentHeight="100" />
+				<RowConstraints percentHeight="100" />
+				<RowConstraints percentHeight="100" />
+			</rowConstraints>
+		</GridPane>
+	</center>
+</BorderPane>
+
